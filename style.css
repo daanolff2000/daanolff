@@ -1,0 +1,208 @@
+:root {
+    --main-blue: #2c308d;
+    --second-blue: #a0aec1;
+    --black: #111822;
+    --grey: #f0f0f0;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body#home{
+    overflow: hidden;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* HEADER */
+header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: #fff;
+    z-index: 5;
+}
+
+header nav{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100vw);
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    transition: transform 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
+                visibility 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
+                opacity 0.5s cubic-bezier(0.64, 0.05, 0.35, 1);
+}
+
+header ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+header li{
+    margin: 0.5em 0;
+}
+
+header a{
+    padding: 0.2em 0.4em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.9em;
+    font-weight: 700;
+    color: var(--second-blue);
+}
+
+a.current{
+    color: var(--main-blue);
+}
+
+/* toggle */
+#toggle{
+    position: absolute;
+    top: 32px;
+    right: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 50;
+}
+
+#toggle span{
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #000;
+    color: transparent;
+    transition: all ease 0.4s;
+}
+
+/* position bars */
+#toggle span:nth-of-type(1) {
+    top: 25%;
+}
+
+#toggle span:nth-of-type(2) {
+    top: 50%;
+    transform-origin: 100% 0;
+}
+
+#toggle span:nth-of-type(3) {
+    top: 75%;
+}
+
+/* after JS toggle function is called */
+.active #toggle span:nth-of-type(1) {
+    transform: rotate(-45deg)!important;
+    top: 50%!important;
+    background-color: #000!important;
+}
+
+.active #toggle span:nth-of-type(2) {
+    transform: scaleX(0)!important;
+    background-color: #000!important;
+}
+
+.active #toggle span:nth-of-type(3) {
+    transform: rotate(45deg)!important;
+    top: 50%!important;
+    background-color: #000!important;
+}
+
+.active header nav{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
+                visibility 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
+                opacity 0.5s cubic-bezier(0.64, 0.05, 0.35, 1);
+}
+
+/* MAIN */
+main{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+section{
+    text-align: center;
+}
+
+/* introduction section*/
+section#intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10vw;
+    color: var(--black);
+}
+
+#home h1{
+    margin-bottom: 5%;
+}
+
+/* projects section */
+section#projects{
+    display: grid;
+    grid-template-areas:
+    "helios"
+    "southpark"
+    "darksouls";
+    justify-items: center;
+}
+
+/* grid item */
+.project{
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+}
+.project img{
+    width: 100%;
+}
+
+#about {
+    padding-top: 100px;
+}
+
+/* TYPOGRAPHY */
+h1{
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+p{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 28px;
+}
