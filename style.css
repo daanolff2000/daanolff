@@ -1,10 +1,8 @@
 /* GLOBAL CSS*/
 :root {
-    --main-blue: #0505af;
-    --second-blue: #a0aec1;
     --black: #111822;
-    --grey: #f0f0f0;
     --white-gold: #F4F1D0;
+    --grey: #9ba0b3;
 }
 
 *, *::after, *::before {
@@ -39,7 +37,7 @@ h2{
 h3{
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 28px;
-    color: var(--white-gold);
+    color: var(--grey);
 }
 
 p{
@@ -234,9 +232,10 @@ html{
 }
 
 #home h3{
-    font-size: 1.3em;
-    font-weight: 500;
+    font-size: 1em;
+    font-weight: 400;
     padding: 0.3em 0 0.6em;
+    text-transform: uppercase;
 }
 
 /* projects section */
