@@ -31,11 +31,31 @@ a{
 /* HEADER */
 header{
     position: fixed;
-    top: 0;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 80px;
     width: 100vw;
-    height: 100px;
+    top: 0;
     background-color: #fff;
     z-index: 5;
+}
+
+header #logo-bttn{
+    position: relative;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+    height: 60%;
+    padding: 0.4em;
+    background: none;
+    border: none;
+}
+
+#logo-bttn img{
+    position: relative;
+    max-height: 100%;
+    justify-self: center;
 }
 
 header nav{
@@ -79,8 +99,10 @@ a.current{
 /* toggle */
 #toggle{
     position: absolute;
-    top: 32px;
-    right: 10vw;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+    right: 7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,7 +183,7 @@ section#intro{
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding: 0 10vw;
+    padding: 0 7vw;
     color: var(--black);
 }
 
@@ -195,13 +217,13 @@ section#projects{
 
 /* TYPOGRAPHY */
 h1{
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2em;
     font-weight: 900;
 }
 
 p{
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.3em;
     font-weight: 400;
     line-height: 28px;
