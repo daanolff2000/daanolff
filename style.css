@@ -80,6 +80,7 @@ header nav{
     transform: translateX(100vw);
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
     background-color: #96881d;
     transition: transform 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
                 visibility 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
