@@ -203,15 +203,6 @@ section{
 }
 
 /* HOME */
-/* scrollable content */
-html{
-    overflow: hidden;
-}
-
-#home {
-    overflow-y: scroll;
-}
-
 /* introduction section*/
 #intro{
     display: flex;
