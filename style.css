@@ -1,10 +1,6 @@
 /* GLOBAL CSS*/
 :root {
-    --main-blue: #2c308d;
-    --second-blue: #5d5e7e;
-    --light-blue: #eeeef3;
-    --black-blue: #111822;
-    --light-grey: #f8f8f8;
+
 }
 
 *, *::after, *::before {
@@ -19,7 +15,7 @@ html{
 
 body{
     height: 100%;
-    background-color: var(--light-grey);
+    background-color: #fff;
 }
 
 /* TYPOGRAPHY */
@@ -27,24 +23,29 @@ h1{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2em;
     font-weight: 900;
-    color: var(--main-blue);
+    color: #000;
 }
 
 h2{
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 28px;
-    color: var(--second-blue);
+    color: #000;
 }
 
 h3{
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 28px;
-    color: var(--second-blue);
+    color: #000;
 }
 
 p{
     font-family: 'IBM Plex Sans', sans-serif;
-    color: var(--black-blue);
+    color: #000;
+}
+
+figcaption{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #fff;
 }
 
 /* COMPONENTS */
@@ -81,7 +82,7 @@ header nav{
     transform: translateX(100vw);
     opacity: 0;
     visibility: hidden;
-    background-color: var(--light-blue);
+    background-color: #fff;
     transition: transform 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
                 visibility 0.5s cubic-bezier(0.64, 0.05, 0.35, 1), 
                 opacity 0.5s cubic-bezier(0.64, 0.05, 0.35, 1);
@@ -100,16 +101,16 @@ header li{
     margin: 0.5em 0;
 }
 
-header a{
+nav a{
     padding: 0.2em 0.4em;
     font-family: 'Lato', sans-serif;
     font-size: 1.9em;
     font-weight: 700;
-    color: var(--second-blue);
+    color: #000;
 }
 
 a.current{
-    color: var(--black-blue);
+    color: #000;
 }
 
 /* logo */
@@ -120,9 +121,15 @@ a.current{
     justify-self: center;
     align-self: center;
     height: 60%;
-    padding: 0.4em;
     background: none;
     border: none;
+}
+
+#logo-bttn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.4em;
 }
 
 #logo-bttn img{
@@ -156,7 +163,7 @@ a.current{
     width: 80%;
     height: 4px;
     border-radius: 10px;
-    background-color: var(--black-blue);
+    background-color: #000;
     color: transparent;
     transition: all ease 0.4s;
 }
@@ -205,34 +212,7 @@ section{
 }
 
 /* HOME */
-/* introduction section*/
-#intro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    padding: 0 7vw;
-    background-color: var(--light-grey);
-}
-
-#home h1{
-    margin-top: -50px;
-    margin-bottom: 5%;
-}
-
-#home h2{
-    font-size: 1.3em;
-    font-weight: 500;
-}
-
-#home h3{
-    font-size: 1em;
-    font-weight: 500;
-    padding: 0.3em 0 0.6em;
-    text-transform: uppercase;
-}
-
-/* projects section */
+/* projects */
 section#projects{
     display: grid;
     grid-template-areas:
@@ -240,24 +220,37 @@ section#projects{
     "southpark"
     "darksouls";
     justify-items: center;
-    background-color: var(--light-grey);
+    width: 100vw;
+    padding: 80px 7vw 0;
 }
 
 /* grid item */
 .project{
-    width: 100vw;
-    height: 100vw;
     overflow: hidden;
-    padding: 0 5vw;
-    margin-bottom: 30px;
+    margin-top: 7vw;
 }
 .project a{
-    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    height: 86vw;
 }
 .project img{
     width: 100%;
+    height: 100%;
+}
+.project figcaption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 86vw;
+    font-size: 1.3em;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* ABOUT */
@@ -272,7 +265,6 @@ footer{
     "copyright";
     height: 80px;
     bottom: 0;
-    background-color: var(--light-grey);
 }
 
 p.copyright{
