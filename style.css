@@ -63,10 +63,6 @@ a{
     display: none;
 }
 
-body img{
-    width: 100%;
-}
-
 /* HEADER */
 header{
     position: fixed;
@@ -246,6 +242,7 @@ section.container{
 }
 .project img{
     height: 100%;
+    width: 100%;
 }
 .project figcaption{
     position: absolute;
