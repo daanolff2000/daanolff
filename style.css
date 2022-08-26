@@ -21,9 +21,10 @@ body{
 /* TYPOGRAPHY */
 h1{
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 900;
     color: #000;
+    padding: 20px 0;
 }
 
 h2{
@@ -60,6 +61,10 @@ a{
 
 .hidden{
     display: none;
+}
+
+img{
+    width: 100%;
 }
 
 /* HEADER */
@@ -213,14 +218,14 @@ section{
 
 /* HOME */
 /* projects */
-section#projects{
+section.container{
     display: grid;
     grid-template-areas:
     "helios"
     "southpark"
     "darksouls";
     justify-items: center;
-    width: 100vw;
+    max-width: 100vw;
     padding: 80px 7vw 0;
 }
 
@@ -228,7 +233,9 @@ section#projects{
 .project{
     overflow: hidden;
     margin-top: 7vw;
+    width: 100%;
 }
+
 .project a{
     position: relative;
     display: flex;
@@ -238,7 +245,6 @@ section#projects{
     height: 86vw;
 }
 .project img{
-    width: 100%;
     height: 100%;
 }
 .project figcaption{
@@ -250,12 +256,17 @@ section#projects{
     font-size: 1.3em;
     font-weight: 500;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* ABOUT */
-#about {
-    padding-top: 80px;
+/* DETAILPAGINA */
+img.preview{
+    height: 86vw;
+}
+
+article.detail p{
+    padding-top: 20px;
+    text-align: left;
 }
 
 /* FOOTER */
