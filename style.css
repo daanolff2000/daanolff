@@ -62,6 +62,13 @@ a{
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+img{
+    width: 100%;
+}
+
+>>>>>>> parent of 93803f0 (logo goed)
 /* HEADER */
 header{
     position: fixed;
