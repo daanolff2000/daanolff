@@ -65,6 +65,7 @@ a{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 img{
     width: 100%;
@@ -75,6 +76,12 @@ img{
 >>>>>>> parent of d14fcdb (Nieuwe pagina's)
 =======
 >>>>>>> parent of a8315b7 (Update style.css)
+=======
+body img{
+    width: 100%;
+}
+
+>>>>>>> parent of a6072e7 (Add files via upload)
 /* HEADER */
 header{
     position: fixed;
@@ -253,7 +260,6 @@ section#projects{
 .project img{
     width: 100%;
     height: 100%;
-    width: 100%;
 }
 .project figcaption{
     position: absolute;
