@@ -1,8 +1,4 @@
-/* GLOBAL CSS*/
-:root {
-
-}
-
+/***** GLOBAL CSS *****/
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -14,41 +10,14 @@ html{
 }
 
 body{
-    height: 100%;
+    min-height: 100%;
     background-color: #fff;
 }
 
-/* TYPOGRAPHY */
-h1{
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2em;
-    font-weight: 900;
-    color: #000;
+body.prjct{
+    background-color: rgb(243, 243, 243);
 }
 
-h2{
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 28px;
-    color: #000;
-}
-
-h3{
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 28px;
-    color: #000;
-}
-
-p{
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #000;
-}
-
-figcaption{
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #fff;
-}
-
-/* COMPONENTS */
 li{
     list-style-type: none;
 }
@@ -62,27 +31,7 @@ a{
     display: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-img{
-    width: 100%;
-}
-
->>>>>>> parent of 93803f0 (logo goed)
-=======
->>>>>>> parent of d14fcdb (Nieuwe pagina's)
-=======
->>>>>>> parent of a8315b7 (Update style.css)
-=======
-body img{
-    width: 100%;
-}
-
->>>>>>> parent of a6072e7 (Add files via upload)
-/* HEADER */
+/* header */
 header{
     position: fixed;
     display: grid;
@@ -130,11 +79,11 @@ nav a{
 }
 
 a.current{
-    color: #000;
+    color: rgb(66, 94, 186);
 }
 
 /* logo */
-#logo-bttn{
+.logo-bttn{
     position: relative;
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -145,14 +94,14 @@ a.current{
     border: none;
 }
 
-#logo-bttn a{
+.logo-bttn a{
     display: block;
     width: 100%;
     height: 100%;
     padding: 0.4em;
 }
 
-#logo-bttn img{
+.logo-bttn img{
     position: relative;
     max-height: 100%;
     justify-self: center;
@@ -226,30 +175,68 @@ a.current{
                 opacity 0.5s cubic-bezier(0.64, 0.05, 0.35, 1);
 }
 
-/* MAIN */
+/* typography */
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 900;
+    color: #000;
+    padding: 20px 0;
+}
+
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 28px;
+    color: #000;
+}
+
+h3{
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 28px;
+    color: #000;
+}
+
+p{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #000;
+}
+
+a.link{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgb(87, 88, 157);
+    display: block;
+    text-align: left;
+    text-decoration: underline;
+}
+
+figcaption{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #fff;
+}
+
+
+/* main */
 section{
+    justify-items: center;
+    width: 100vw;  
+    padding: 80px 7vw 0;
     text-align: center;
 }
 
-/* HOME */
-/* projects */
-section#projects{
+body#home section{
     display: grid;
-    grid-template-areas:
-    "helios"
-    "southpark"
-    "darksouls";
-    justify-items: center;
-    width: 100vw;
-    padding: 80px 7vw 0;
+    grid-template-columns: 1fr;
 }
 
 /* grid item */
-.project{
+figure.project{
     overflow: hidden;
     margin-top: 7vw;
+    width: 100%;
 }
-.project a{
+
+/* link */
+figure.project a{
     position: relative;
     display: flex;
     justify-content: center;
@@ -257,10 +244,14 @@ section#projects{
     width: 100%;
     height: 86vw;
 }
-.project img{
-    width: 100%;
+
+/* image */
+figure.project a img{
     height: 100%;
+    width: 100%;
 }
+
+/* caption */
 .project figcaption{
     position: absolute;
     width: 100%;
@@ -270,15 +261,10 @@ section#projects{
     font-size: 1.3em;
     font-weight: 500;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* ABOUT */
-#about {
-    padding-top: 80px;
-}
-
-/* FOOTER */
+/* footer */
 footer{
     display: grid;
     grid-template-areas:
@@ -293,5 +279,107 @@ p.copyright{
     align-self: center;
     justify-self: center;
 }
+
+/* PORTFOLIO WORK */
+article.project-about img{
+    width: 100%;
+    max-width: 550px;
+}
+
+article.project-about p{
+    padding-top: 1.3em;
+    text-align: left;
+    width: 100%;
+}
+
+article.project-about p:last-of-type{
+    padding: 1.3em 0;
+}
+
+
+
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px)  {
+    
+    body#home section{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 6.5vw;
+    }
+
+    body#home footer{
+        margin-top: 50px;
+    }
+
+    body.prjct section{
+        padding: 80px 15vw 0;
+    }
+
+    body.prjct article.project-about p:first-of-type{
+        padding-top: 2em;
+    }
+
+    figure.project a{
+        height: 40.25vw;
+    }
+
+    .project figcaption{
+        line-height: 40.25vw;
+    }
+
+}
+
+
+
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+
+    body#home section{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 3.25vw;
+    }
+
+    body.prjct section{
+        padding: 80px 25vw 0;
+    }
+
+    figure.project a{
+        height: 26.8vw;
+    }
+
+    .project figcaption{
+        line-height: 26.8vw;
+    }
+}
+
+
+
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+
+    body#home section{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 3.25vw;
+    }
+
+    body#home footer{
+        margin-top: 250px;
+    }
+
+    body.prjct section{
+        padding: 80px 35vw 0;
+    }
+
+    figure.project a{
+        height: 18.5625vw;
+    }
+
+    .project figcaption{
+        line-height: 18.5625vw;
+    }
+}
+
 
 
