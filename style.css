@@ -14,7 +14,7 @@ body{
     background-color: #fff;
 }
 
-body.prjct{
+body.prjct, body#about{
     background-color: rgb(243, 243, 243);
 }
 
@@ -286,7 +286,7 @@ article.project-about img{
     max-width: 550px;
 }
 
-article.project-about p{
+article.project-about p, article#about-me p{
     padding-top: 1.3em;
     text-align: left;
     width: 100%;
@@ -312,6 +312,10 @@ article.project-about p:last-of-type{
     }
 
     body.prjct section{
+        padding: 80px 25vw 0;
+    }
+
+    body#about section{
         padding: 80px 15vw 0;
     }
 
@@ -344,6 +348,10 @@ article.project-about p:last-of-type{
         padding: 80px 25vw 0;
     }
 
+    body#about section{
+        padding: 80px 25vw 0;
+    }
+
     figure.project a{
         height: 26.8vw;
     }
@@ -369,7 +377,11 @@ article.project-about p:last-of-type{
     }
 
     body.prjct section{
-        padding: 80px 35vw 0;
+        padding: 80px 25vw 0;
+    }
+
+    body#about section{
+        padding: 80px 30vw 0;
     }
 
     figure.project a{
