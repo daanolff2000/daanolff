@@ -36,15 +36,15 @@ header{
     position: fixed;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80px;
+    grid-template-rows: 80px 30px;
     width: 100vw;
     top: 0;
     background-color:#fff;
     z-index: 5;
 }
 
-/* menu */
-header nav{
+/* mobile menu */
+header nav.mobile-nav{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -57,7 +57,7 @@ header nav{
                 opacity 0.5s cubic-bezier(0.64, 0.05, 0.35, 1);
 }
 
-header ul{
+header nav.mobile-nav ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,11 +66,11 @@ header ul{
     height: 100%;
 }
 
-header li{
+header nav.mobile-nav li{
     margin: 0.5em 0;
 }
 
-nav a{
+header nav.mobile-nav a{
     padding: 0.2em 0.4em;
     font-family: 'Lato', sans-serif;
     font-size: 1.9em;
@@ -78,8 +78,42 @@ nav a{
     color: #000;
 }
 
-a.current{
+header nav.mobile-nav a.current{
     color: rgb(66, 94, 186);
+}
+
+/* desktop menu */
+nav.desktop-nav{
+    display: none;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+header nav.desktop-nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+header nav.desktop-nav li{
+    margin: 0 0.5em;
+}
+
+header nav.desktop-nav a{
+    padding: 0.2em 0.4em;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+}
+
+header nav.desktop-nav a.current{
+    color: rgb(66, 94, 186);
+    text-decoration: underline;
 }
 
 /* logo */
@@ -166,7 +200,7 @@ a.current{
     top: 50%!important;
 }
 
-.active header nav{
+.active header nav.mobile-nav{
     transform: translateX(0);
     visibility: visible;
     opacity: 1;
@@ -219,7 +253,7 @@ figcaption{
 section{
     justify-items: center;
     width: 100vw;  
-    padding: 80px 7vw 0;
+    padding: 70px 7vw 0;
     text-align: center;
 }
 
@@ -298,7 +332,6 @@ article.project-about p:last-of-type{
 
 
 
-
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media (min-width:641px)  {
     
@@ -312,11 +345,11 @@ article.project-about p:last-of-type{
     }
 
     body.prjct section{
-        padding: 80px 25vw 0;
+        padding: 120px 25vw 0;
     }
 
     body#about section{
-        padding: 80px 15vw 0;
+        padding: 120px 15vw 0;
     }
 
     body.prjct article.project-about p:first-of-type{
@@ -339,17 +372,25 @@ article.project-about p:last-of-type{
 /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
 
+    nav.desktop-nav{
+        display: block;
+    }
+
+    button#toggle{
+        display: none;
+    }
+
     body#home section{
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 3.25vw;
     }
 
     body.prjct section{
-        padding: 80px 25vw 0;
+        padding: 120px 25vw 0;
     }
 
     body#about section{
-        padding: 80px 25vw 0;
+        padding: 120px 25vw 0;
     }
 
     figure.project a{
@@ -377,11 +418,11 @@ article.project-about p:last-of-type{
     }
 
     body.prjct section{
-        padding: 80px 25vw 0;
+        padding: 120px 25vw 0;
     }
 
     body#about section{
-        padding: 80px 30vw 0;
+        padding: 120px 30vw 0;
     }
 
     figure.project a{
