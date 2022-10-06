@@ -299,6 +299,15 @@ figure.project a img{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.project-about figcaption{
+    color: #000;
+    text-align: left;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
 /* footer */
 footer{
     display: grid;
@@ -321,6 +330,13 @@ article.project-about img{
     max-width: 550px;
 }
 
+article.project-about figure{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
+    padding-top: 1.3em;
+}
+
 article.project-about p, article#about-me p{
     padding-top: 1.3em;
     text-align: left;
@@ -331,6 +347,10 @@ article.project-about p:last-of-type{
     padding: 1.3em 0;
 }
 
+img#profile-pic{
+    width: 100%;
+    max-width: 400px;
+}
 
 
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
